@@ -1,17 +1,13 @@
 function getNumSquares(a,b,c) {
-	var k;
-	k = (parseInt(a/b)) * (parseInt(b/c));
-	k = k * (c*c);
-	k = a*b - k;
-    return parseInt(a / b) * parseInt(b / c);
+	t = parseInt(a/c) * parseInt(b/c);
+	return t;
 }
 
 function getFreeSpace(a,b,c) {
-    var k;
-    k = (parseInt(a/b)) * (parseInt(b/c));
-    k = k * (c*c);
-    k = a*b - k;
-	return k;
+    t = parseInt(a/c) * parseInt(b/c);
+    t = t * Math.pow(c,2);
+    t = a * b - t;
+    return t;
 }
 
 function assert(expression, message) {
