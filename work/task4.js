@@ -1,15 +1,19 @@
 function getNthItem(a, n) {
-	s = 0;
-	if(n === 1){
-		return a;
-	}
-	if(n > 1){
-		//return Math.pow((n-1),2) % 10000;
-		for(i=0; i<a; i++)
-		s = a - 2*s[i-1];
-		return s;
-	}
+    s = [];
+    s[0]=0;
+    if (n<0) {
+        return 0;
+    }else{
+        for(i=0; i<(n+1); i++){
+            if (i > 0){
+                s[i] = a - 2*s[i-1];
+            }
+        }
+        return s[n];
+    }
+    return s[n];
 }
+
 
 function assert(expression, message) {
 	if(expression) {
